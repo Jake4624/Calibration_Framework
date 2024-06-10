@@ -1,0 +1,20 @@
+#!/bin/bash -f 
+## Jacob Rusch
+## 7 July 2023
+###################################################################
+## SLURM PREAMBLE: Lines starting with #SBATCH are not comments!
+## SEE https://slurm.schedmd.com/sbatch.html for explanations.
+## -J is job name
+## -o is output file name
+## -n is number of tasks requested
+## -t is time limit in minutes
+## -p is the partition
+###################################################################
+                            
+#SBATCH -J rusch_dissertation_objective_2_Wang4a_Data_Multi_Cycle
+#SBATCH -o rusch_dissertation_objective_2_Wang4a_Data_Multi_Cycle.qlog
+#SBATCH -n 1
+#SBATCH -t 1440
+#SBATCH -p moorecores
+
+time srun -n 1 ./mpDriverUmat_DFGRD
